@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Tutorial</title>
+    <style>
+      .highlight {
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Hello World</h1>
+    <p class="text">First Paragraph</p>
+    <p class="text">Second Paragraph</p>
+    <button id="clickMe">Click Me</button>
+
+    <script>
+      const title = document.getElementById("title");
+      console.log(title);
+      const text1 = document.getElementsByClassName("text");
+      console.log(text1.length);
+      const classText = document.querySelector(".text");
+      console.log(classText);
+      const allClassText = document.querySelectorAll(".text");
+      console.log(allClassText.length);
+      title.textContent = "this is my new title";
+      classText.innerHTML = "new Paragraph!";
+      title.style.color = "red";
+      classText.style.color = "blue";
+      title.classList.add("highlight");
+      
+    </script>
+  </body>
+</html>
